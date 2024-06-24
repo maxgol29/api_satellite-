@@ -24,8 +24,6 @@ def is_satellite():
         return True
 
 
-# Your position is within +5 or -5 degrees of the ISS position.
-
 def is_night():
     parameters = {
         "lat": MY_LAT,
@@ -53,7 +51,3 @@ while True:
             connection.login(FROM_EMAIL, PASSWORD)
             connection.sendmail(FROM_EMAIL, TO_EMAIL, msg="Subject:Satellite in the sky\n\n Look up, buddy")
 
-# If the ISS is close to my current position
-# and it is currently dark
-# Then send me an email to tell me to look up.
-# BONUS: run the code every 60 seconds.
